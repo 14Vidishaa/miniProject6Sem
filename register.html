@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <style>
+        #address {
+            width: 430px;
+        }
+
+        #imagePortion {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            width: 430px;
+        }
+        #role{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            width: 430px;
+        }
+        #role select{
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        #registerButton{
+            border-radius: 10px;
+            background-color: rgb(43, 121, 157);
+            color: white;
+            width: 100px;
+            padding: 10px;
+            font-size: 15px;
+        }
+        
+        
+    </style>
+    <center>
+    <div id="headerSection">
+        <h1>Online Voting System</h1>
+    </div>
+    <hr>
+
+    <div id="bodySection">
+        <h2>Registration</h2><br><br>
+        <form method="POST" action="register.php" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Enter Name">
+            <input type="number" name="mobile" placeholder="Enter Mobile"><br><br>
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="cpass" placeholder="Confirm Password"><br><br>
+            <input id="address" type="text" name="address" placeholder="Address"><br><br>
+            
+            <div id="imagePortion">
+                Upload Image : <input type="file" name="photo"><br><br>
+            </div><br>
+
+            <div id="role">
+                Select Role : <select name="role">
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+                </select><br><br>
+            </div><br>
+                <button id="registerButton" type="submit">Register</button><br><br>
+                 <!-- <input type="submit"> -->
+                Already have an accournt : <a href="index.html">Login here</a>
+            
+        </form>
+    </div>
+</center>
+</body>
+
+</html>
